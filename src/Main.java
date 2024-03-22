@@ -40,7 +40,7 @@ class Main
             throw new IOException("Строка не является математической операцией.");
         } else if (array_split.length > 3) {                                                                            //Много символов
             throw new IOException("Формат математической операции не удовлетворяет заданию.");
-        } else if ((arab_element < 2 && rome_element == 0) || (arab_element == 0 && rome_element < 2)) {                //Некоректные символы
+        } else if ((arab_element < 2 && rome_element == 0) || (arab_element == 0 && rome_element < 2)) {                //Некорректные символы
             throw new IOException("Введены некорректные данные.");
         } else if (arab_element == 1 && rome_element == 1) {                      //Разные системы
             throw new IOException("Используются одновременно разные системы счисления.");
@@ -53,7 +53,7 @@ class Main
             case "*" -> (x * y);
             case "-" -> (x - y);
             case "+" -> (x + y);
-            default -> throw new IOException("Строка не является математической операцией.");                           //Исключение при несоответсвии математическим операциям
+            default -> throw new IOException("Строка не является математической операцией.");                           //Исключение при несоответствии математическим операциям
         };
 
         if (rome_element == 2 && result <= 0){                                                                          //Исключение в римской системе (отрицательные числа или 0)
